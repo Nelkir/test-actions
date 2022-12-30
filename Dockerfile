@@ -7,7 +7,7 @@ RUN go build -mod vendor -o /go/bin/app .
 
 # final stage
 FROM alpine:latest
-LABEL Name=ServiceMetricExporter Version=1.2.7
+LABEL Name=test-actions Version=0.0.1
 RUN apk --no-cache add ca-certificates
 COPY --from=builder /go/bin/app /app
 ENTRYPOINT ["./app"]
