@@ -75,6 +75,7 @@ jobs:
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
         with:
+          context: .
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
