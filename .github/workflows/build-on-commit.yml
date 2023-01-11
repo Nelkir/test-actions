@@ -78,4 +78,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            built: ${{ steps.build-and-push.outputs.metadata }}
+            built: ${{ steps.build-and-push.outputs.digest }}
